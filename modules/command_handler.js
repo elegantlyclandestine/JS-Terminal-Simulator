@@ -1,4 +1,5 @@
-function load_commands() {
+const fs = require('fs')
+function loadCommands() {
     if(!fs.existsSync("./resources/commands.json")){
         if(fs.existsSync("./resources/commands.json")){
             fs.mkdirSync("./resources/")
@@ -45,4 +46,4 @@ function load_commands() {
     }
 }
 
-module.exports.load_commands = { load_commands }
+module.exports = { loadCommands }
