@@ -1,4 +1,4 @@
-const { help } = require("help.js")
+const { help } = require("./help.js")
 
 const cmds = Object.freeze ({
     HELP: 0,
