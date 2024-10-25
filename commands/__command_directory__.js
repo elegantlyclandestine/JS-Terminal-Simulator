@@ -17,3 +17,5 @@ function process_command(command) {
             console.log("Command not found!")
     }
 }
+
+module.exports = { process_command }
