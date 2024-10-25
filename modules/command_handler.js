@@ -44,3 +44,5 @@ function load_commands() {
             }, null, 2))
     }
 }
+
+module.exports.load_commands = { load_commands }
