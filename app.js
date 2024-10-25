@@ -1,5 +1,6 @@
 const fs = require('fs');
 const readline = require("readline");
+const { load_commands } = require('./modules/command_handler.js');
 const rl = readline.createInterface({input: process.stdin,output: process.stdout});
 fetch = require('node-fetch');
 const connect = async (url) => {
@@ -13,22 +14,7 @@ console.log(`Connecting to "${url}"...`)
 }
 }
 
-if(!fs.existsSync("./resources/commands.json")){
-    if(fs.existsSync("./resources/commands.json")){
-        fs.mkdirSync("./resources/")
-    }
-    fs.writeFileSync("./resources/commands.json", JSON.stringify(
-        {
-            "help":{
-                "about":"View this help menu.",
-                "code":"N/A"
-            },
-            "exit":{
-                "about":"Exit the command line mode.",
-                "code":"N/A"
-            }
-        }, null, 2))
-}
+load_commands()
 
 const fatalError = function(){
     console.log("A fatal error has occurred! The program could not auto-recover.")
