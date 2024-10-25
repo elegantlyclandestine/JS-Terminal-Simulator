@@ -6,7 +6,7 @@ const fatalError = function() {
     console.log("A fatal error has occurred! The program could not auto-recover.");
 };
 
-const terminal = function(returned = false) {
+function terminal() {
     try {
         if (returned === false) {
             console.log('\nTerminal Simulator VERSION 2. To see available commands, type "help".');
