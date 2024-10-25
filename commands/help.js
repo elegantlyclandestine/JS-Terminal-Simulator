@@ -12,4 +12,4 @@ function help() {
     });
 }
 
-module.exports.help = { help}
+module.exports.help = { help }
